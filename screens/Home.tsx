@@ -1,27 +1,33 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 import { RootTabScreenProps } from "../types";
 import tailwind from "tailwind-rn";
 import React from "react";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import Carousel from "../components/Caroussel";
-import { dummyData } from "../data/Data";
-//import Carousel, { Pagination } from "react-native-x2-carousel";
+import { dummyData } from "../data/DummyData";
+import { PromoData } from "../data/PromoData";
 
-const DATA = [{ text: "#1" }, { text: "#2" }, { text: "#3" }];
-
-export default function TabOneScreen({
-  navigation,
-}: RootTabScreenProps<"TabOne">) {
-  function renderItem(data: any) {
-    return (
-      <View key={data.text} style={styles.item}>
-        <Text>{data.text}</Text>
-      </View>
-    );
+export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
+  const list = () => {
+    return PromoData.map((element) => {
+      return (
+        <View key={element.id} style={{ margin: 10 }}>
+          <Image
+            style={styles.tinyLogo}
+            source={{
+              uri: element.url,
+            }}
+          />
+          <Text>{element.title}</Text>
+        </View>
+      );
+    });
+  };
+  function List() {
+    return <View>{list()}</View>;
   }
-
   return (
-    <View style={tailwind("mt-8")}>
+    <ScrollView style={tailwind("mt-8")}>
       <View style={tailwind("flex flex-row justify-between")}>
         <View style={tailwind("flex flex-row")}>
           <View style={tailwind("ml-2")}>
@@ -34,7 +40,12 @@ export default function TabOneScreen({
             </Text>
           </View>
         </View>
-
+        <Image
+          style={styles.tinyLogo}
+          source={{
+            uri: "asset:/images/icon.png",
+          }}
+        />
         <View style={tailwind("flex flex-row items-center")}>
           <Text>O </Text>
           <Text>Offers</Text>
@@ -44,22 +55,23 @@ export default function TabOneScreen({
         Today'Featured
       </Text>
       <Carousel data={dummyData} />
-    </View>
+      <Text style={tailwind("text-xl mt-4 ml-2 font-bold")}>
+        Best Promotion for you
+      </Text>
+      {List()}
+    </ScrollView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: 50,
   },
-  item: {
-    width: 200,
-    height: 200,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#dbf3fa",
+  tinyLogo: {
+    width: 50,
+    height: 50,
+  },
+  logo: {
+    width: 66,
+    height: 58,
   },
 });
