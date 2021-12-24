@@ -6,6 +6,7 @@ import { SimpleLineIcons } from "@expo/vector-icons";
 import Carousel from "../components/Caroussel";
 import { dummyData } from "../data/DummyData";
 import ListPromo from "../components/ListPromo";
+import ListPopular from "../components/ListPopular";
 
 export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
   return (
@@ -27,14 +28,9 @@ export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
           <Text>Offers</Text>
         </View>
       </View>
-      <Text style={tailwind("text-xl mt-4 ml-2 font-bold")}>
-        Today'Featured
-      </Text>
       <Carousel data={dummyData} />
-      <Text style={tailwind("text-xl mt-4 ml-2 font-bold")}>
-        Best Promotion for you
-      </Text>
       <ListPromo />
+      <ListPopular />
     </ScrollView>
   );
 }

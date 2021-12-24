@@ -8,6 +8,7 @@ import {
   Animated,
 } from "react-native";
 import CarouselItem from "./CarouselItem";
+import tailwind from "tailwind-rn";
 
 const { width, heigth } = Dimensions.get("window");
 let flatList;
@@ -42,6 +43,9 @@ const Carousel = ({ data }) => {
   if (data && data.length) {
     return (
       <View>
+        <Text style={tailwind("text-xl mt-4 ml-2 font-bold")}>
+          Today'Featured
+        </Text>
         <FlatList
           data={data}
           ref={(flatList) => {

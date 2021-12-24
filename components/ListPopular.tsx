@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
-import { PromoData } from "../data/PromoData";
 import tailwind from "tailwind-rn";
+import { PopularData } from "../data/PopularFood";
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 });
 
 const list = () => {
-  return PromoData.map((element) => {
+  return PopularData.map((element) => {
     return (
       <View key={element.id} style={{ margin: 10 }}>
         <View style={tailwind("flex flex-row justify-center")}>
@@ -37,11 +37,11 @@ const list = () => {
   });
 };
 
-export default function ListPromo() {
+export default function ListPopular() {
   return (
     <>
       <Text style={tailwind("text-xl mt-4 ml-2 font-bold")}>
-        Best Promotion for you
+        Polular Food for you
       </Text>
       <View style={tailwind("flex flex-row justify-center mt-4")}>
         {list()}
