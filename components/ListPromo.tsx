@@ -40,7 +40,7 @@ const list = () => {
 export default function ListPromo() {
   return (
     <>
-      <Text style={tailwind("text-xl mt-4 ml-2 font-bold")}>
+      <Text style={tailwind("text-xl mt-2 ml-2 font-bold")}>
         Best Promotion for you
       </Text>
       <View style={tailwind("flex flex-row justify-center mt-4")}>

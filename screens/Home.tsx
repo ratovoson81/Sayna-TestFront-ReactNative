@@ -7,6 +7,7 @@ import Carousel from "../components/Caroussel";
 import { dummyData } from "../data/DummyData";
 import ListPromo from "../components/ListPromo";
 import ListPopular from "../components/ListPopular";
+import Category from "../components/Category";
 
 export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
   return (
@@ -31,6 +32,7 @@ export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
       <Carousel data={dummyData} />
       <ListPromo />
       <ListPopular />
+      <Category />
     </ScrollView>
   );
 }
