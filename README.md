@@ -1,4 +1,4 @@
-# Sayna Test Front react
+# Sayna Test Front react native
 
 Tahina Anthony Ratovoson
 
@@ -10,4 +10,4 @@ Tahina Anthony Ratovoson
 
 ## Lancement
 
-La source pour installer l'application sur android .apk est situé dans build/test-sayna-anthony.apk
+La source (.apk) de l'application pour l'installer sur android est situé dans build/test-sayna-anthony.apk
