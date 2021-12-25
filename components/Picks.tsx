@@ -2,7 +2,6 @@ import { FontAwesome, Fontisto, MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import { View, Text, ScrollView, Image, StyleSheet } from "react-native";
 import tailwind from "tailwind-rn";
-import { PicksData } from "../data/Picks";
 
 const styles = StyleSheet.create({
   container: {
@@ -11,6 +10,7 @@ const styles = StyleSheet.create({
   tinyLogo: {
     width: 200,
     height: 125,
+    borderRadius: 4,
   },
   logo: {
     width: 66,
