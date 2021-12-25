@@ -4,7 +4,7 @@ Tahina Anthony Ratovoson
 
 ## Fonctionnalité
 
-- Les listes des cartes sont scrollables verticalement.
+- Les listes des cartes sont scrollables horizontalement.
 - La navigation fonctionne.
 - Les assets sont hébergés sur firebase.
 
