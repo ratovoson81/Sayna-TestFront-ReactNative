@@ -20,8 +20,12 @@ const styles = StyleSheet.create({
 const list = () => {
   return PopularData.map((element) => {
     return (
-      <View key={element.id} style={{ margin: 10 }}>
-        <View style={tailwind("flex flex-row justify-center")}>
+      <View key={element.id} style={{ margin: 5 }}>
+        <View
+          style={tailwind(
+            "flex flex-row justify-center border p-4 border-gray-300 rounded-md"
+          )}
+        >
           <Image
             style={styles.tinyLogo}
             source={{

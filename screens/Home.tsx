@@ -20,7 +20,17 @@ export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
       <ListPromo />
       <ListPopular />
       <Category />
+      <View style={tailwind(" mt-2 ml-2  flex-row justify-between")}>
+        <Text style={tailwind("font-bold text-xl")}>Top Picks For You</Text>
+        <Text style={tailwind("mr-2 text-red-700")}>See all</Text>
+      </View>
       <Picks data={PicksData} />
+      <View
+        style={tailwind("text-xl mt-2 ml-2 font-bold flex-row justify-between")}
+      >
+        <Text style={tailwind("font-bold text-xl")}>Fatest Near You</Text>
+        <Text style={tailwind("mr-2 text-red-700")}>See all</Text>
+      </View>
       <Picks data={FatestData} />
     </ScrollView>
   );

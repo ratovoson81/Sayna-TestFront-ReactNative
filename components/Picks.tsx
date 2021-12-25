@@ -52,9 +52,6 @@ const list = (props: any) => {
 export default function Picks(data: any) {
   return (
     <View>
-      <Text style={tailwind("text-xl mt-2 ml-2 font-bold")}>
-        Top Picks For You
-      </Text>
       <ScrollView horizontal={true} style={tailwind("mt-2")}>
         {list(data)}
       </ScrollView>
