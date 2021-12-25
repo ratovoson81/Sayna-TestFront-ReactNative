@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   NavigationContainer,
@@ -94,7 +94,9 @@ function BottomTabNavigator() {
         component={Home}
         options={({ navigation }: RootTabScreenProps<"TabOne">) => ({
           title: "Home",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="home-filled" size={24} color={color} />
+          ),
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate("Modal")}
@@ -117,7 +119,9 @@ function BottomTabNavigator() {
         component={Pickup}
         options={{
           title: "Pickup",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="directions-walk" size={24} color={color} />
+          ),
         }}
       />
       <BottomTab.Screen
@@ -125,7 +129,9 @@ function BottomTabNavigator() {
         component={Search}
         options={{
           title: "Search",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="search-outline" size={24} color={color} />
+          ),
         }}
       />
       <BottomTab.Screen
@@ -133,7 +139,9 @@ function BottomTabNavigator() {
         component={Order}
         options={{
           title: "Order",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="list-alt" size={24} color={color} />
+          ),
         }}
       />
       <BottomTab.Screen
@@ -141,7 +149,9 @@ function BottomTabNavigator() {
         component={Account}
         options={{
           title: "Account",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="ios-person-outline" size={24} color={color} />
+          ),
         }}
       />
     </BottomTab.Navigator>
