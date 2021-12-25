@@ -20,4 +20,11 @@ export const dummyData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     id: 3,
   },
+  {
+    title: "Vegatable Salad",
+    url: "https://firebasestorage.googleapis.com/v0/b/test-sayna-fe3c4.appspot.com/o/test%20mobile%2Fimage%2012.png?alt=media&token=cdf11b73-f08f-4b4d-9391-35a8e6c216a2",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    id: 4,
+  },
 ];

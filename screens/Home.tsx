@@ -8,6 +8,8 @@ import { dummyData } from "../data/DummyData";
 import ListPromo from "../components/ListPromo";
 import ListPopular from "../components/ListPopular";
 import Category from "../components/Category";
+import Picks from "../components/Picks";
+import { FatestData, PicksData } from "../data/Picks";
 
 export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
   return (
@@ -25,14 +27,35 @@ export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
           </View>
         </View>
         <View style={tailwind("flex flex-row items-center")}>
-          <Text>O </Text>
-          <Text>Offers</Text>
+          <Image
+            style={styles.tinyLogo}
+            source={{
+              uri: "https://firebasestorage.googleapis.com/v0/b/test-sayna-fe3c4.appspot.com/o/test%20mobile%2Foffer%201%20(Traced).png?alt=media&token=e05f6d8a-6520-46c1-9bd5-557b0d17bcbd",
+            }}
+          />
+          <Text style={tailwind("mx-2")}>Offers</Text>
         </View>
       </View>
       <Carousel data={dummyData} />
       <ListPromo />
       <ListPopular />
       <Category />
+      <Picks data={PicksData} />
+      <Picks data={FatestData} />
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 50,
+  },
+  tinyLogo: {
+    width: 25,
+    height: 25,
+  },
+  logo: {
+    width: 66,
+    height: 58,
+  },
+});
