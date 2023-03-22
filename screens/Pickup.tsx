@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 import EditScreenInfo from "../components/EditScreenInfo";
-import { Text, View } from "../components/Themed";
+import { Text, View } from "../components/themed";
 import { RootTabScreenProps } from "../types";
 
 export default function Pickup({ navigation }: RootTabScreenProps<"TabOne">) {

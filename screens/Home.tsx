@@ -7,10 +7,10 @@ import Carousel from "../components/Caroussel";
 import { TodayData } from "../data/TodayData";
 import ListPromo from "../components/ListPromo";
 import ListPopular from "../components/ListPopular";
-import Category from "../components/Category";
+import Category from "../components/category";
 import Picks from "../components/Picks";
 import { FatestData, PicksData } from "../data/Picks";
-import TodayCard from "../components/TodayCard";
+import TodayCard from "../components/todayCard";
 
 export default function Home({ navigation }: RootTabScreenProps<"TabOne">) {
   return (
